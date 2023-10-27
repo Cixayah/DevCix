@@ -27,7 +27,7 @@
 }
 
 body {
-    background: url(--bg-url) no-repeat top center/cover;
+    background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
