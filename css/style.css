@@ -10,18 +10,18 @@
 
 :root {
     --text--color: #fff;
-    --bg-url: url(./assets/bg-mobile.jpg);
+    --bg-url: url(../assets/bg-mobile.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
 }
 
 .light {
     --text-color: #060606;
-    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --bg-url: url(../assets/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
 }
 
 body {
-    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    background: url(../assets/bg-mobile.jpg) no-repeat top center/cover;
 }
 
 body * {
