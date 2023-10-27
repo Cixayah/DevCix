@@ -15,6 +15,7 @@
     --surface-color: rgba(255, 255, 255, 0.5);
     --surface-color-hover: rgba(0, 0, 0, 0.2);
     --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url:url(../assets/MoonStars.svg);
 }
 
 .light {
@@ -24,6 +25,7 @@
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url:url(../assets/Sun.svg);
 }
 
 body {
@@ -56,6 +58,16 @@ body * {
     margin-top: 8px;
     font-weight: 500;
     line-height: 24px;
+}
+
+/*switch*/
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: #fff var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
 }
 
 /* links */
