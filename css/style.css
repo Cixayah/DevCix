@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 
+/* Visualização Dark Mode */
 :root {
     --text-color: #fff;
     --bg-url: url(../assets/bg-mobile.jpg);
@@ -15,9 +16,11 @@
     --surface-color: rgba(255, 255, 255, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.2);
     --highlight-color: rgba(255, 255, 255, 0.2);
-    --switch-bg-url:url(../assets/MoonStars.svg);
+    --switch-bg-url: url(../assets/MoonStars.svg);
+    --bordinha: 1px solid red;
 }
 
+/* Visualização Light Mode */
 .light {
     --text-color: #060606;
     --bg-url: url(../assets/bg-mobile-light.jpg);
@@ -25,7 +28,7 @@
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1);
-    --switch-bg-url:url(../assets/Sun.svg);
+    --switch-bg-url: url(../assets/Sun.svg);
 }
 
 body {
@@ -61,13 +64,39 @@ body * {
 }
 
 /*switch*/
+#switch {
+    position: relative;
+    /* border: var(--bordinha); */
+    width: 64px;
+    margin: 4px auto;
+}
+
 #switch button {
     width: 32px;
     height: 32px;
     background: #fff var(--switch-bg-url) no-repeat center;
     border: 0;
     border-radius: 50%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
 }
 
 /* links */
