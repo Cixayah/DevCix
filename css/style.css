@@ -6,12 +6,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /* Define estilos padrão para todos os elementos, eliminando margens e preenchimentos padrão. */
 
 /* Definição de variáveis para o "Dark Mode" */
 :root {
     --text-color: #fff;
-    --bg-url: url(../assets/bg-desktop.jpg);
+    --bg-url: url(../assets/bg-mobile.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.2);
@@ -19,29 +20,33 @@
     --switch-bg-url: url(../assets/MoonStars.svg);
     --bordinha: 1px solid red;
 }
+
 /* Define variáveis de CSS personalizadas para o modo "Dark". */
 
 /* Definição de variáveis para o "Light Mode" */
 .light {
     --text-color: #060606;
-    --bg-url: url(../assets/bg-desktop-light.jpg);
+    --bg-url: url(../assets/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(../assets/Sun.svg);
 }
+
 /* Define variáveis de CSS personalizadas para o modo "Light". */
 
 body {
     background: var(--bg-url) no-repeat top center/cover;
 }
+
 /* Configura o fundo do corpo para uma imagem especificada que ocupa a tela inteira. */
 
 body * {
     font-family: 'Inter', monospace;
     color: var(--text-color);
 }
+
 /* Aplica a fonte 'Inter' e a cor de texto definida pelas variáveis em todo o conteúdo do corpo. */
 
 /* Estilos para o contêiner principal */
@@ -164,4 +169,14 @@ ul li a:hover {
 footer {
     padding: 24px 0;
     text-align: center;
+}
+
+@media(min-width: 700px) {
+    :root {
+        --bg-url: url(../assets/bg-desktop.jpg);
+    }
+
+    .light {
+        --bg-url: url(../assets/bg-desktop-light.jpg);
+    }
 }
