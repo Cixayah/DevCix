@@ -38,6 +38,7 @@
 
 body {
     background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
 }
 
 /* Configura o fundo do corpo para uma imagem especificada que ocupa a tela inteira. */
