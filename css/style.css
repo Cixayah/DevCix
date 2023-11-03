@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500&display=swap');
-
-/* Adicione o link para a fonte no seu arquivo HTML, não aqui */
+/* Importa a fonte "Martian Mono" do Google Fonts. Lembre-se de vincular esta fonte em seu arquivo HTML. */
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+/* Define estilos padrão para todos os elementos, eliminando margens e preenchimentos padrão. */
 
-/* Visualização Dark Mode */
+/* Definição de variáveis para o "Dark Mode" */
 :root {
     --text-color: #fff;
     --bg-url: url(../assets/bg-desktop.jpg);
@@ -19,8 +19,9 @@
     --switch-bg-url: url(../assets/MoonStars.svg);
     --bordinha: 1px solid red;
 }
+/* Define variáveis de CSS personalizadas para o modo "Dark". */
 
-/* Visualização Light Mode */
+/* Definição de variáveis para o "Light Mode" */
 .light {
     --text-color: #060606;
     --bg-url: url(../assets/bg-desktop-light.jpg);
@@ -30,43 +31,48 @@
     --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(../assets/Sun.svg);
 }
+/* Define variáveis de CSS personalizadas para o modo "Light". */
 
 body {
     background: var(--bg-url) no-repeat top center/cover;
 }
+/* Configura o fundo do corpo para uma imagem especificada que ocupa a tela inteira. */
 
 body * {
     font-family: 'Inter', monospace;
     color: var(--text-color);
 }
+/* Aplica a fonte 'Inter' e a cor de texto definida pelas variáveis em todo o conteúdo do corpo. */
 
+/* Estilos para o contêiner principal */
 #container {
     width: 360px;
     margin: 56px auto 0;
     padding: 0 24px;
-
 }
 
+/* Estilos para o perfil */
 #profile {
     text-align: center;
     padding: 24px;
 }
 
+/* Estilos para a imagem do perfil */
 #profile img {
     width: 112px;
     border-radius: 60px;
 }
 
+/* Estilos para o parágrafo no perfil */
 #profile p {
     margin-top: 8px;
     font-weight: 700;
     line-height: 24px;
 }
 
-/*switch*/
+/* Estilos para o interruptor de tema */
 #switch {
     position: relative;
-    /* border: var(--bordinha); */
     width: 64px;
     margin: 4px auto;
 }
@@ -99,39 +105,32 @@ body * {
     border-radius: 9999px;
 }
 
-/* links */
+/* Estilos para a lista de links */
 ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 16px;
-
     padding: 24px 0;
 }
 
 ul img {
     height: 15px;
     margin: 0 10px;
-    /* Define margem para espaçamento vertical */
 }
 
 ul li a {
     border-radius: 20px;
     display: flex;
-
     align-items: center;
-    /* vertical */
     justify-content: center;
-    /* horizontal */
     padding: 10px 24px;
-
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     text-decoration: none;
     font-weight: 500;
-
     transition: background 0.4s;
 }
 
@@ -140,6 +139,7 @@ ul li a:hover {
     border: 1.50px solid var(--text-color);
 }
 
+/* Estilos para os links sociais */
 #social-links {
     display: flex;
     justify-content: center;
@@ -157,9 +157,9 @@ ul li a:hover {
 
 #social-links a:hover {
     background: var(--highlight-color);
-
 }
 
+/* Estilos para o rodapé */
 footer {
     padding: 24px 0;
     text-align: center;
